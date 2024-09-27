@@ -6,7 +6,7 @@
     "distDir": "../ui"
   },
   "package": {
-    "productName": "dead-sky-channel",
+    "productName": "dead-sky-channel-project",
     "version": "0.1.0"
   },
   "tauri": {

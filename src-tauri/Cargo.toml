@@ -1,8 +1,8 @@
 [package]
-name = "dead-sky-channel"
+name = "app"
 version = "0.1.0"
-description = "webapp webgame webloss"
-authors = ["Raine"]
+description = "A Tauri App"
+authors = ["you"]
 license = ""
 repository = ""
 default-run = "app"
