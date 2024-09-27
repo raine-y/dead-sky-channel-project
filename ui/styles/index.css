@@ -21,7 +21,6 @@ body {
     width: 100vw;
     height: 100vh;
     filter: brightness(.70);
-    filter: blur(.2);
 
 }
 
@@ -52,6 +51,7 @@ body {
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
+    filter: blur(.2);
 }
 
 #popup {
