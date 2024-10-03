@@ -3,7 +3,8 @@
     "beforeBuildCommand": "",
     "beforeDevCommand": "",
     "devPath": "../ui",
-    "distDir": "../ui"
+    "distDir": "../ui",
+    "withGlobalTauri": "true"
   },
   "package": {
     "productName": "dead-sky-channel-project",
@@ -55,10 +56,10 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 600,
+        "height": 700,
         "resizable": true,
         "title": "Dead Sky Channel",
-        "width": 800
+        "width": 900
       }
     ]
   }
