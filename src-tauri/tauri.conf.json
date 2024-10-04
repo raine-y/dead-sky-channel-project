@@ -4,7 +4,7 @@
     "beforeDevCommand": "",
     "devPath": "../ui",
     "distDir": "../ui",
-    "withGlobalTauri": "true"
+    "withGlobalTauri": true
   },
   "package": {
     "productName": "dead-sky-channel-project",

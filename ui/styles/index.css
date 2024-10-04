@@ -52,41 +52,9 @@ body {
 /* Hey... */
 /* ~~~~~~ */
 
-#heyContainer {
-}
-
-#hey {
-  position: absolute;
-  padding: 0;
-  margin: 0;
-  right: 0;
-  top: 50vh;
-  z-index: 50;
-  color: var(--v-lightText);
-  font-family: VT232; /* Not actually working yet */
-  opacity: .79;
-  filter: blur(.5px);
-}
-
-#heyTwo {
-    position: absolute;
-    padding: 0;
-    margin: 0;
-    right: 0;
-    top: 50vh;
-    z-index: 49;
-    color: rgb(218, 183, 243);
-    font-family: VT232; /* Not actually working yet */
-    opacity: .45;
-    filter: blur(1.4px);
-    padding-top: 2px;
-    padding-left: 2px;
-  }
-  
-
-/* ----------- */
-/* Popup Stuff */
-/* ----------- */
+/* ------ */
+/* Popup  */
+/* ------ */
 
 #popupContainer {
   z-index: 20;
@@ -305,11 +273,4 @@ body {
   font-size: 2.4vw;
   margin-left: 0.5vw;
   margin-right: 0.5vw;
-}
-
-.insideFadeIn {
-  /* Fitler blur and opacity with LANCER glitches */
-}
-
-.mildJitter {
 }
