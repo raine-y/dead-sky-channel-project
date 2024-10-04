@@ -105,7 +105,7 @@ body {
     margin-left: 4px;
     font-weight: 600;
     font-size: 17px;
-    filter: blur(0.4px);
+    filter: blur(0.1px);
   }
   
   #popupTitle > p {
