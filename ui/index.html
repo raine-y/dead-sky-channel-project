@@ -1,134 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="icon" type="image/x-icon" href="#" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dead Channel</title>
+    <title>Dead Sky Channel</title>
     <link rel="stylesheet" href="styles/index.css" />
-
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
-    </style>
-
-   <script src="../node_modules/animejs/lib/anime.min.js"></script>
-
-    <script>
-
-      function windFull() {
-        const invoke = window.__TAURI__.invoke
-        invoke('wind_full')
-      }
-
-      function heyWait() {
-
-        function wait(time) {
-          return new Promise((resolve) => setTimeout(resolve, time));
-        }
-      }
-
-      function instaFade() {
-        document.getElementById("goInsideWrapper").style.display = "block";
-        document.getElementById("goInsideWrapper").style.opacity = "1";
-        document.getElementById("introScreen").style.display = "none";
-      }
-
-      function fadeLoad() {
-        document.getElementById("popupContainer").className = "fadeOut";
-
-        function wait(time) {
-          return new Promise((resolve) => setTimeout(resolve, time));
-        }
-
-        wait(1200).then(
-          () => (document.getElementById("introScreen").className = "fadeOut")
-        );
-        wait(1850).then(
-          () =>
-            (document.getElementById("goInsideWrapper").className = "fadeIn")
-        );
-        wait(2200).then(
-          () => (document.getElementById("introScreen").style.display = "none")
-        );
-        wait(1700).then(
-          () =>
-            (document.getElementById("goInsideWrapper").style.display = "block")
-        );
-        wait(2400).then(() => console.log("..."));
-        wait(3000).then(() =>
-          console.log(
-            "what are you doing here? this is not for you, dont judge my promises..."
-          )
-        );
-      }
-
-      function askAgain() {
-        document.getElementById("popupContentText").innerHTML = "Please?";
-        document.getElementById("pleaResponse").style.display = "block";
-        document.getElementById("plea").style.display = "none";
-      }
-
-      function notCool() {
-        document.getElementById("popupContentText").innerHTML = "...";
-        document.getElementById("popupContentBtn").style.display = "none";
-
-        function wait(time) {
-          return new Promise((resolve) => setTimeout(resolve, time));
-        }
-
-        wait(100).then (
-          () => (document.getElementById("popupContainer").className = "fadeOut")
-        )
-        wait(1200).then(
-          () => (document.getElementById("introScreen").className = "fadeOut")
-        );
-        wait(1850).then(
-          () =>
-            (document.getElementById("goInsideWrapper").className = "fadeIn")
-        );
-        wait(2200).then(
-          () => (document.getElementById("introScreen").style.display = "none")
-        );
-        wait(1700).then(
-          () =>
-            (document.getElementById("goInsideWrapper").style.display = "block")
-        );
-
-        wait(2400).then(() => console.log("..."));
-
-        wait(3000).then(() => console.log("a**hole"));
-      }
-
-      function randomString(Length) {
-        var text = "";
-        var possible =
-          "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+=";
-        for (var i = 0; i < Length; i++)
-          text += possible.charAt(Math.floor(Math.random() * possible.length));
-        return text;
-      }
-
-      function changingRandomString(Length) {
-        setInterval(function () {
-          var elements = document.getElementsByClassName("random");
-          for (var i = 0; i < elements.length; i++) {
-            elements[i].innerHTML = randomString(Length);
-          }
-        }, 25);
-      }
-    </script>
+    <link rel="stylesheet" href="styles/fonts.css" />
+    <script src="scripts/index/popupHandler.js"></script>
+    <script src="scripts/randomString.js"></script>
   </head>
   <body>
+    <!-- NOTES // TODO 
+        1. Tauri + Kira audio que on load
+        2. Anime.JS intigration for animation
+        3. hey()
+    -->
     <div id="introScreen">
-      <div id="heyContainer">
-        <div id="hey">
-          <h1>Hey..</h1>
-        </div>
-        <div id="heyTwo">
-          <h1>Hey..</h1>
-        </div>
-      </div>
       <img
         id="backgroundImage"
         src="assets/outside.png"
@@ -140,7 +27,7 @@
         <div id="popup">
           <div id="popupHeader">
             <div id="popupTitle">
-              <p>&#9618;&#9617;&#9618;&#9618;&#9617; &#9633; .</p>
+              <p>&#9618;&#9617;&#9618;&#9618; &#9617;&#9633;.</p>
             </div>
             <div id="popupNavBtn" onclick="instaFade()">
               <p>X</p>
@@ -179,15 +66,7 @@
       </div>
     </div>
     <!-- DO NOT CROSS ! POLICE LINE ! DO NOT CROSS ! POLICE LINE -->
-    <div id="goInsideWrapper">
-      <div id="transitionText">
-        <h2 id="termCursor">></h2>
-        <h2 id="inside">Thanks for coming back</h2>
-      </div>
-    </div>
+     <div id="goInsideWrapper">
+     </div>
   </body>
-  <script>
-    changingRandomString(10);
-    windFull();
-  </script>
 </html>
